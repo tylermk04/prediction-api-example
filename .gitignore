@@ -1,0 +1,4 @@
+*.pyc
+*.Rproj*
+.Rdata
+.Rhistory
