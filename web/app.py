@@ -21,7 +21,7 @@ class MpgView(MethodView):
         hp = request.form.get("hp")
         mpg = self.__predict_mpg(cyl, disp, hp)
         if mpg:
-            return "Predicted horsepower is %s" % mpg
+            return render_template("form.html", predicted_mpg=mpg)
         return "Unable to predict horsepower, please try again."
 
     def __predict_mpg(self, cyl, disp, hp):

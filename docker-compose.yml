@@ -2,12 +2,10 @@ version: '3'
 services:
   api:
     build: ./api
-    ports:
-     - "8000:8000"
     volumes:
      - ./api/glm-1.Rds:/opt/api/glm-1.Rds
   web:
-    build: ./app
+    build: ./web
     ports:
       - "5000:5000"
     environment:
